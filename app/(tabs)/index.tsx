@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
 import { Link, router, Redirect } from 'expo-router';
+import React from 'react'
 
 
 function ExercisePage() {
 	return (
 		<View>
 			<Link style={styles.pageLink} push href = './ContactPage'>- Contact Page </Link>
-			<Link style={styles.pageLink} push href= './SkillsPage'>- Skills Page</Link>
+			<Link style={styles.pageLink} push href= './HobbyPage'>- Hobby Page</Link>
 			<Link style={styles.pageLink} push href= './ProjectsPage'>- Projects Page</Link>
 			
 		</View>
@@ -18,7 +19,7 @@ export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Text style={styles.azariasTitle}>         Azarias'</Text>
+        <Text style={styles.azariasTitle}>Azarias'</Text>
         <Text style={styles.title}>Personal Portfolio</Text>
         <Text style={styles.subtitle}>Welcome to my personal portfolio.</Text>
         <ExercisePage />
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     padding: 24,
-    backgroundColor: '#FFF7CB'
+    backgroundColor: '#CBFFF4'
   },
   main: {
     flex: 1,

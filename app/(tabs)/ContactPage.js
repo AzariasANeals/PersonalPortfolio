@@ -2,22 +2,25 @@ import { View, Text, StyleSheet, Image, ScrollView, FlatList } from 'react-nativ
 import { Link } from 'expo-router';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { ImageBackground } from 'react-native-web';
 
 export default function ContactPage() {
 	return (
 		<View style={styles.container}>
+        <ScrollView>
 			<Text style={styles.title}>THIS IS MY CONTACT PAGE</Text>
-			<Link style={styles.pageLink} push href= '/SkillsPage'>Go to Skills Page!</Link>
+			<Link style={styles.pageLink} push href= '/HobbyPage'>Go to Hobby Page!</Link>
             <Link style={styles.pageLink} push href= '/ProjectsPage'>Go to Projects Page!</Link>
             <Link style={styles.pageLink} push href="/">
           <ThemedText style={styles.pageLink} type="link">Go to home screen!</ThemedText>
         </Link>
+        
         <Image source={profilePic} style={styles.image} resizeMode='auto'></Image>
-        <Text style={styles.text}>Here is my Contact information</Text>
-        <Text style={styles.text}>Email: Azarias.P.Aneals@seattlecolleges.edu</Text>
-        <Text style={styles.text}>Phone-Number: (206)-353-160</Text>
-        <Text style={styles.text}>Github:<Link style={styles.github} push href= 'https://github.com/AzariasANeals'>https://github.com/AzariasANeals</Link></Text>
-
+          <Text style={styles.text}>Here is my Contact information</Text>
+          <Text style={styles.text}>Email: Azarias.P.Aneals@seattlecolleges.edu</Text>
+          <Text style={styles.text}>Phone-Number: (206)-353-160</Text>
+          <Text style={styles.text}>Github:<Link style={styles.github} replace href= 'https://github.com/AzariasANeals'>https://github.com/AzariasANeals</Link></Text>
+        </ScrollView>
 		</View>
 	);
 }
@@ -72,8 +75,8 @@ const styles = StyleSheet.create({
       },
     text:{
       fontFamily:'Libre Baskerville',
-      fontSize: 30,
-      marginHorizontal: "auto",
+      fontSize: 25,
+      marginHorizontal: 25,
       paddingVertical: 15
     }
   });
